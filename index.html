@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+    <title>Mi pagina</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <nav class="navbar" role="navigation" aria-label="main-navigation">
+                <div class="navbar-brand">
+                    <figure class="image is-64x64">
+                        <img class="is-rounded" src="https://picsum.photos/id/76/90/90">
+                    </figure>
+
+                    <a role="button" class="navbar-burger is-active" data-target="navMenu" aria-label="menu"
+                        aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu is-active" id="navMenu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="index.html">
+                            Inicio
+                        </a>
+                        <a class="navbar-item" href="#hero">
+                            hero
+                        </a>
+                        <a class="navbar-item" href="#cartas">
+                            cartas
+                        </a>
+                        <a class="navbar-item" href="#contacto">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section class="hero is-danger is-large" id="hero">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">Bienvenido a mi sitio</h1>
+                    <h2 class="subtitle">El mejor sitio de internet</h2>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <br>
+        <div class="container" id="cartas">
+            <div class="columns is-multiline is-flex">
+                <div class="column is-one-third">
+                    <div class="card" style="height: 100%;">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Proposito de la pagina
+                            </p>
+                        </div>
+                        <div class="card-image is-4by3">
+                            <img src="https://picsum.photos/id/56/4000/3000" alt="imagen de carta">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                Esta pagina tiene como proposito mostrar que logre hacer una pagina utilizando el CSS
+                                framework llamado Bulma
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="card" style="height: 100%;">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Dificultades que encontre
+                            </p>
+                        </div>
+                        <div class="card-image is-4by3">
+                            <img src="https://picsum.photos/id/99/4000/3000" alt="imagen de carta">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                varias, ya que es algo nuevo para mi, como el no saber como hacer que las cartas
+                                cambiaran de tamaño, o como construir el navbar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="card" style="height: 100%;">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Lo que me gustó
+                            </p>
+                        </div>
+                        <div class="card-image is-4by3">
+                            <img src="https://picsum.photos/id/89/4000/3000" alt="imagen de carta">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                Al ir profundizando mas en cada elemento se hace mas facil y practico el ir construyendo
+                                la pagina. No necesitar de ir configurando el css para cada cosa ahorra bastante tiempo.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center mt-6 mb-6" id="contacto">
+            <div class="column is-half has-background-dark">
+                <p class="is-size-3 has-text-weight-bold has-text-white">Contactame</p>
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingrese su nombre">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Apellido</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingrese su apellido">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="correo electronico">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Mensaje</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Escriba un mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Enviar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2025 Janier Vasquez - Creado con Bulma
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
